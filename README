@@ -1,0 +1,28 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=633
+
+If you like well formatted files use this plugin to chage the indention of a complete file.
+
+Annotations:
+The indention information is taken out of the VIM Indent-files. This
+script processes them in a little different way than vim itself, therefore
+it is possible that the indent-functions have to be rewritten before they 
+work.
+This script tries to rewrite the indent functions automatically (during 
+this a file "reindent.tmp" will be created in your current working 
+directory).
+There may be indent functions out there that don't work with this script  because they are too complex to be rewriten automatically with my 
+code.
+                                                                                
+Preconditions:
+- A indent function has to exist for your current file (indentexpr is set)
+- Your current working directory has to be writable if Indent-function has to be rewritten.
+
+Usage:
+1. Copy this file to your plugin directory
+2. start vim with i.E. a HTML-File
+3. Hit <Lead>R (If you don't know what <Leader> is read :help leader 
+    or press \R to reindent).
+    If using menus you will find a new menu item "Reindent" in menu 
+    "Syntax".
+4. Customize the Keystroke with an Entry in your .vimrc i.E.:
+    map ff <Plug>reindent " call reindent by pressing ff
